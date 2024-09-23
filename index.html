@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS</title>
+    
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+<div class="container bg-info py-2">
+<h1 class="text-center">CRUDS PROJECT</h1>
+<div>
+<label for="ptoductnameinput">product name</label>
+<input type="text" id="ptoductnameinput" class="form-control" oninput="validationName()">
+<div  id="nammassig"  class="alert-danger d-none form-control ">u should enter first latter capital and 3 to 8 small</div>
+</div>
+<div>
+    <label for="ptoductpriceinput">product price</label>
+    <input type="number" id="ptoductpriceinput" class="form-control" oninput="validationprice()">
+    <div id="pricemasseg" class="alert-danger d-none form-control ">u should enter price from 1000 to 10000</div>
+</div>
+<div>
+    <label for="ptoducttypeinput">product type</label>
+    <input type="text" id="ptoducttypeinput" class="form-control"oninput="validationtype()">
+    <div id="typemasseg" class="alert-danger d-none form-control ">u should enter type of product</div>
+</div>
+
+<div>
+    <label for="ptoductdescriptioninput">product description</label>
+    <textarea type="text" id="ptoductdescriptioninput" class="form-control" oninput="validationdescription()"></textarea>
+    <div id="descriptionmsg" class="alert-danger d-none form-control ">u should enter description for product</div>
+</div>
+<button  id="addbutton"  class="btn btn-dark my-2 w-100" onclick="addproduct()">Add Product</button>
+<button  id ="updateBtn"class="btn btn-dark my-2 w-100 d-none" onclick="updateproduct()">update product</button>
+<input type="search" placeholder="search by name" id ="searchid " class="form-control my-3 w-50  mx-auto" oninput="searchproudect()">
+<table class="table text-center">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>PRICE</th>
+            <th>TYPE</th>
+            <tH>description</tH>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody id ="tabletbady">
+      
+    </tbody>
+
+</table>
+
+</div>
+
+
+
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
